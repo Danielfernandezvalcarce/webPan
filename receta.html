@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECETA Y ELABORACIÓN</title>
+    <link rel="stylesheet" href = "stylesreceta.css">
+</head>
+<body>
+    <header>
+        <img id="cabecera" src="IMAGENES/LOGOTIPO.jpg">
+        <h1>EN ESTA PAGINA APRENDERAS A HACER DELICIOSO PAN CASERO!</h1>
+    </header>
+    <nav id="menu">
+        <ul>
+            <!--MENU, ACORDARSE DE QUITAR EL "_TARGET" DE LA PÁGINA QUE ESTAMOS-->
+            <!--IDENTIFICAMOS DISTINTAS CLASES DE ENLACE PARA PODER PONERLE UN COLOR A CADA UNA-->
+            <li><a class="gray" href="index.html" target="_blank">INICIO</a></li>
+            <li><a class="red" href="historia.html" target="_blank">HISTORIA</a>
+                <ul>
+                    <!--SUBMENU CON TRANSICION A ROJO-->
+                    <li><a class="red" href="historia.html" target="_blank">PREHISTORIA</a></li>
+                    <li><a class="red" href="historia.html" target="_blank">EDAD MEDIA</a></li>
+                    <li><a class="red" href="historia.html" target="_blank">REVOLUCION INDUSTRIAL</a></li>
+                    <li><a class="red" href="historia.html" target="_blank">ACTUALIDAD</a></li>
+                </ul>
+            </li>
+            <li><a class="blue" href="receta.html">RECETA</a>
+                <ul>
+                    <!--SUBMENU CON TRANSICION A AZUL-->
+                    <li><a class="blue" href="receta.html">VIDEO</a></li>
+                    <li><a class="blue" href="receta.html">LISTA DE LA COMPRA</a></li>
+                    <li><a class="blue" href="receta.html">ELABORACION</a></li>
+                </ul>
+            </li>
+            <li><a class="gold" href="paginas para comprar pan.html" target="_blank">MEJORES LUGARES PARA COMPRAR PAN</a>
+                <ul>
+                    <!--SUBMENU3-->
+                    <li><a class="gold" href="paginas para comprar pan.html" target="_blank">EN MALLORCA</a></li>
+                    <li><a class="gold" href="paginas para comprar pan.html" target="_blank">EN ESPAÑA</a></li>
+                    <li><a class="gold" href="paginas para comprar pan.html" target="_blank">EN EUROPA</a></li>    
+                    <li><a class="gold" href="paginas para comprar pan.html" target="_blank">EN MUNDO</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!--AQUI PONEMOS UN VIDEO DE YOUTUBE EXPLICANDO EL PROCESO DE HACER PAN-->
+    <div id="video">
+        <iframe id="receta" src="https://www.youtube.com/embed/yCDTVzRQnD0"></iframe>
+    </div>
+    <div id="parrafada">
+        <span id="encabezamiento parrafada">
+            <h1>LISTA DE LA COMPRA</h1>
+        </span>
+        <p class="descripcion">Para hacer pan, primero deberemos de acercarnos a nuestro supermercado mas cercano y comprar los siguientes
+            ingredientes, pero antes de nada te dejo unos enlaces para comprar los ingredientes en <b><a class="cambia" href="https://www.amazon.es/">AMAZON</a></b>
+            por que cuando sales del instituto ya estan todos los supermercados cerrados!
+            <ul>
+                <li><a class="cambia" href="https://www.amazon.es/Pastas-Gallo-Harina-Fuerza-Paquete/dp/B01M35DCG6/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=62AB5J28IMK5&dchild=1&keywords=HARINA+DE+TRIGO&qid=1635801842&rdc=1&sprefix=harina+de+trigo%2Caps%2C140&sr=8-2" target="_blank">HARINA</a></li>
+                <li><a class="cambia" href="https://www.amazon.es/GRANERO-INTEGRAL-SAL-MARINA-FINA/dp/B00DN9MJOA/ref=sr_1_10?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2H25P3SA6CSSX&dchild=1&keywords=sal&qid=1635802001&rdc=1&sprefix=sal%2Caps%2C160&sr=8-10" target="_blank">SAL</a></li>
+                <li><a class="cambia" href="https://www.amazon.es/Energy-Feelings-Levadura-Nutricional-Vitamina/dp/B01MF79E88/ref=sr_1_2_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=JZM8XNJHLRFY&dchild=1&keywords=levadura&qid=1635802035&rdc=1&sprefix=levadura%2Caps%2C176&sr=8-2-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE4TEhaUDEyUjhJSTImZW5jcnlwdGVkSWQ9QTAyNDExMzkyUEFPUkY5RlRFWU1YJmVuY3J5cHRlZEFkSWQ9QTAyNTQ2NTAzMzFSMEFLRFNBR1E0JndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&th=1" target="_blank" >LEVADURA</a></li>
+                <li><a class="cambia" href="https://www.amazon.es/PURA-Monta%C3%B1a-purificada-alcalina-Envasada/dp/B0916KBVZ9/ref=sr_1_1_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3LTGVG78RZOS9&dchild=1&keywords=agua&qid=1635802089&sprefix=agua%2Caps%2C164&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyODZPTUs1RkVJTDAyJmVuY3J5cHRlZElkPUEwNTcxMjM0MjA5OEhVWFYwUVFFSSZlbmNyeXB0ZWRBZElkPUEwNzczODk4MjgzUDFDQklTQ0E4MiZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=" target="_blank" >AGUA</a></li>
+                <li><a class="cambia" href="https://www.amazon.es/Aceite-Virgen-Estuche-Gourmet-Espejo/dp/B07KW6JFJK/ref=sr_1_4_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=LQLJQI8PI9LO&dchild=1&keywords=aceite&qid=1635802112&sprefix=aceite%2Caps%2C141&sr=8-4-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExVTlJN0ZHMFo4RjYzJmVuY3J5cHRlZElkPUEwNjcyNzc5MlpBNktaSjFORUhYUyZlbmNyeXB0ZWRBZElkPUEwMjA0MjI2OTA0VDgySUhMN1pVJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==" target="_blank" >ACEITE</a></li>
+            </ul>
+        </p>
+        <p class="descripcion">Una vez conseguidos los ingredientes, nos ponemos manos a la obra, </p>
+    </div>
+    <div id="tabla">
+        <table id="tabla receta">
+            <tr>
+                <th>PROCESO</th>
+                <th>ELABORACIÓN</th>
+            </tr>
+            <tr>
+                <td>CREAR LA MASA</td>
+                <td>Mezclamos <i>500gr</i> de <b>harina de trigo</b>, <i>5gr</i> de <b>levadura</b>, <i>7gr</i> de <b>sal</b> con
+                <i>350cc</i> de <b>agua</b> ligeramente tibia. Lo removemos y juntamos todo, hasta tener una masa uniforme.
+            </tr>
+            <tr>
+                <td>PROCESO DE LEVADO</td>
+                <td>Cubrimos la masa con <i>una fina capa</i> de <b>aceite</b> y lo dejamos reposar por unos <i>30 minutos</i></td></td>
+            </tr>
+            <tr>
+                <td>PROCESO DE FORMADO</td>
+                <td>Amasamos y dividimos la mezcla para darle la forma que queramos y la dejamos reposar unos <i>30 minutos</i>
+                dentro de un trapo con un poco de harina, a su vez ponemos a precalentar el horno</td>
+            </tr>
+            <tr>
+                <td>PROCESO DE HORNEADO</td>
+                <td>Antes de introducir la mezcla en el horno, le practicamos unos <b>cortes</b> en la parte superior, posteriormente
+                introducimos la mezcla en el horno, tapada, por algun recipiente, durante <i>15 minutos</i> a <i>temperatura máxima</i>,
+                despues de esos 15 minutos, lo destapamos y lo volvemos a hornear otros <i>15 minutos</i> a <i><b>temperatura media</b></i>
+                y finalmente sacamos del horno! Ya tenemos nuestro pan hecho!!!</td>
+            </tr>
+        </table>
+    </div>
+    <div id="final">
+        <h2>FIN!!!!!</h2>
+    </div>
+    <footer>
+        Alumno de primero de DAW del CFIP "Borja Moll" Daniel Fernández Valcarce.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,502 @@
+/*PAGINA RESPONSIVE PARA ORDENADORES, LA DEJAMOS TAL CUAL ESTABA, MARCAMOS LA RESOLUCION MAXIMA FULL HD*/
+
+@media screen and (min-width: 800px) {
+    html{
+        background-image: url(IMAGENES/BACKGROUND.jpg);
+        height: 1000px;
+    }
+    /*DESPUES ESTABLECEMOS LOS VALORES ABSOLUTOS PARA TODA LA PAGINA, COMO POR EJEMPLO EL TIPO DE LETRA*/
+    *{
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    /*MODIFICAMOS EL HEADER LOS H1 Y H2 A NUESTRO GUSTO*/
+    header{
+    text-align: center;
+    position: relative;
+    }
+    img#cabecera{
+        left: 550px;
+    }
+    h2{
+        color: white;
+        background-color: black;
+        width: 1000px;
+        position: relative;
+        left: 300px;
+    }
+    /*LOS ENLACES CON EL ID CAMBIA, SE MOSTRARÁN CON EL FONDO AZUL*/
+    a.cambia {
+        background-color: powderblue;
+        transition: background-color 1s; /*AQUI PREPARO AL ENLACE PARA RECIBIR UNA ORDEN DE TRANSICION QUE LE DICTARÉ MAS ADELANTE*/
+    }
+    /*AQUI PONGO UNA REGLA QUE, EN CONJUNCION CON LA ANTERIOR, DICE QUE CUANDO PASE EL RATON POR ENCIMA, CAMBIE EL COLOR DE FONDO A DORADO*/
+    a:hover {
+        background-color: gold;
+    }
+    /*EMPEZAMOS A COLOCAR LOS ELEMENTOS DE LA BARRA DEL DESPLEGABLE, A VER QUE SALE*/
+    /*USAMOS ETIQUETA COMPUESTA PARA IR A LA UNORDERED LIST DENTRO DE LA ID MENU Y LE PONEMOS UNAS CARACTERISTICAS BASICAS*/
+    nav#menu ul{
+        list-style: none;
+        margin: 0%;
+        padding: 0%;
+        position: relative;
+        left: 400px;
+        z-index: 1;
+    }
+    /*AQUI NOS REFERIMOS A TODOS LOS ELEMENTOS LI DE LA UNORDERED LIST EN ESTE CASO QUIERO QUE SEAN CON FONDO NEGRO*/
+    nav#menu ul li{
+        background-color: black;
+    }
+    /*AHORA ME REFIERO A LOS ENLACES DEL MENU PRINCIPAL. ASI SE NOS QUEDARIAN CON LA LETRA DE COLOR BLANCO, SEPARADOS Y SE MOSTRARAN COMO UN BLOQUE*/
+    nav#menu ul a{
+        display: block;
+        color: white;
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    /*CON ESTOS ELEMENTOS SE NOS QUEDA ORIENTADO HORIZONTALMENTE EN LA POSICION QUE QUEREMOS*/
+    nav#menu ul li{
+        position: relative;
+        float: left;
+        margin: 0%;
+        padding: 0%;
+    }
+    /*AHORA VAMOS A ESCONDER LOS SUBMENUS DENTRO DEL MENU PRINCIPAL*/
+    nav#menu ul ul {
+        display: none;
+        position: absolute;
+        left: 0%;
+        padding: 0%;
+    }
+    /*AHORA NOS REFERIMOS A LOS ITEMS DE LOS DESPLEGABLES*/
+    nav#menu ul ul li{
+        float: none;
+        width: 150px;
+    }
+    /*ENLACES DE LOS ITEMS DEL MENU DESPLEGABLE*/
+    nav#menu ul ul a{
+        line-height: 120%;
+        padding: 10px;
+    }
+    /*AHORA VAMOS A HACER QUE LOS SUBMENUS SE MUESTREN AL PASAR POR EL*/
+    nav#menu ul li:hover > ul {
+        display: block;
+    }
+    /*A PARTIR DE AQUI VAMOS A PONERLE COLORES DISTINTOS A CADA DESPLEGABLE Y EL COLOR HACIA EL QUE TRANSICIONA*/
+    a.gray {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gray:hover {
+        background-color:gray;
+    }
+    a.red {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.red:hover {
+        background-color: red;
+    }
+    a.blue {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.blue:hover {
+        background-color: blue;
+    }
+    a.gold {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gold:hover {
+        background-color: gold;
+    }
+    /*AQUI ACABA EL INDICE DESPLEGABLE*/
+
+    /*LE DAMOS FORMA AL PARRAFO DE LA PAGINA DE INICIO*/
+    main{
+        background-color: white;
+        opacity: 0.9;
+        margin: 0%;
+        border: 0%;
+        padding: 0%;
+        width: 1000px;
+        text-align: center; 
+        position: absolute;
+        left: 400px;
+        top: 400px;
+    }
+    p#descripcion{
+        background-color:transparent;
+        border: 5px solid gold;
+    }
+    /*COLOCAMOS EL IFRAME DEL AUDIO DONDE QUERAMOS*/
+    iframe{
+        position: absolute;
+        top: 700px;
+    }
+    /*LE DAMOS FORMA A EL NAV QUE CONTIENTE LAS FOTOS QUE PINCHANDO EN ELLAS NOS LLEVA A LAS OTRAS PÁIGNAS*/
+    aside{
+        background-color: beige;
+        margin: 0%;
+        border: 0%;
+        padding: 0%;
+        width: 310px;
+        height: 610px;
+        position: absolute;
+        top: 300px;
+        left: 50px;
+    }
+    /*LE DAMOS UN FORMATO UNICO PARA TODA LAS FOTOS*/
+    img{
+        width: 300px;
+        height: 200px;
+        left: 5px;
+        top: 5px;
+        position: relative;
+        display: block;
+    }
+    /*POR ULTIMO PONEMOS EL FOOTER A NUESTRO GUSTO*/
+    footer{
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        position: fixed;
+        bottom: 50px;
+        left: 460px;
+        margin: 0%;
+        padding: 0%;
+        border: 0px;
+        width: 800px;
+        height: 30px;
+    }
+}
+/*#######################################################*/
+/*RESOLUCION PARA MOVILES MARCAMOS ANCHURA-MAX: 450PX*/
+@media screen and (max-width: 450px) {
+    html{
+        background-image: url(IMAGENES/IMAGENES\ RESOLUCION\ MOVIL/FONDO.jpg);
+        width: 100%;
+        height: 150%;
+        height: fit-content;
+    }
+    *{
+        font-family: 'Times New Roman', Times, serif
+    }
+    header{
+        text-align: center;
+        left: 0%;
+    }
+    img#cabecera{
+        left: 35%;
+    }
+    h2{
+        color: white;
+        background-color: black;
+        width: 90%;
+        position: relative;
+        left: 5%;
+    }
+    /*LOS ENLACES CON EL ID CAMBIA, SE MOSTRARÁN CON EL FONDO AZUL*/
+    a.cambia {
+        background-color: greenyellow;
+        transition: background-color 1s; /*AQUI PREPARO AL ENLACE PARA RECIBIR UNA ORDEN DE TRANSICION QUE LE DICTARÉ MAS ADELANTE*/
+    }
+    /*AQUI PONGO UNA REGLA QUE, EN CONJUNCION CON LA ANTERIOR, DICE QUE CUANDO PASE EL RATON POR ENCIMA, CAMBIE EL COLOR DE FONDO A DORADO*/
+    a:hover {
+        background-color: gold;
+    }
+    /*EMPEZAMOS A COLOCAR LOS ELEMENTOS DE LA BARRA DEL DESPLEGABLE*/
+    /*USAMOS ETIQUETA COMPUESTA PARA IR A LA UNORDERED LIST DENTRO DE LA ID MENU Y LE PONEMOS UNAS CARACTERISTICAS BASICAS*/
+    nav#menu ul{
+        left: 0%;
+        z-index: 1;
+        width: 40%;
+        /*INTRODUCIMOS EL MODELO BOX SIZING PARA QUE EL MENU SE VEA EN VERTICAL*/
+        display: flex;
+        flex-direction: column;
+    }
+    /*AQUI NOS REFERIMOS A TODOS LOS ELEMENTOS LI DE LA UNORDERED LIST EN ESTE CASO QUIERO QUE SEAN CON FONDO NEGRO*/
+    nav#menu ul li{
+        background-color: black;
+    }
+    /*AHORA ME REFIERO A LOS ENLACES DEL MENU PRINCIPAL. ASI SE NOS QUEDARIAN CON LA LETRA DE COLOR BLANCO, SEPARADOS Y SE MOSTRARAN COMO UN BLOQUE*/
+    nav#menu ul a{
+        display: block;
+        color: white;
+        padding: 10px;
+        letter-spacing: 1px;
+    }
+    /*CON ESTOS ELEMENTOS SE NOS QUEDA ORIENTADO HORIZONTALMENTE EN LA POSICION QUE QUEREMOS*/
+    nav#menu ul li{
+        position: relative;
+        float: left;
+        margin: 0%;
+        padding: 0%;
+    }
+    /*AHORA VAMOS A ESCONDER LOS SUBMENUS DENTRO DEL MENU PRINCIPAL*/
+    nav#menu ul ul {
+        display: none;
+        position: absolute;
+        left: 0%;
+        padding: 0%;
+    }
+
+    /*A PARTIR DE AQUI VAMOS A PONERLE COLORES DISTINTOS A CADA DESPLEGABLE Y EL COLOR HACIA EL QUE TRANSICIONA*/
+    a.gray {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gray:hover {
+        background-color:gray;
+    }
+    a.red {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.red:hover {
+        background-color: red;
+    }
+    a.blue {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.blue:hover {
+        background-color: blue;
+    }
+    a.gold {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gold:hover {
+        background-color: gold;
+    }
+    /*AQUI ACABA EL INDICE DESPLEGABLE*/
+
+    /*LE DAMOS FORMA AL PARRAFO DE LA PAGINA DE INICIO*/
+    main{
+        background-color: white;
+        opacity: 0.9;
+        margin: 0%;
+        border: 0%;
+        padding: 0%;
+        width: 400px;
+        text-align: center; 
+        position: absolute;
+        left: 5%;
+        top: 60%;
+    }
+    p#descripcion{
+        background-color:transparent;
+        border: 5px solid gold;
+    }
+    /*COLOCAMOS EL IFRAME DEL AUDIO DONDE QUERAMOS*/
+    iframe{
+        position: absolute;
+        top: 35%;
+        left: 50%;
+    }
+    /*LE DAMOS FORMA A EL NAV QUE CONTIENTE LAS FOTOS QUE PINCHANDO EN ELLAS NOS LLEVA A LAS OTRAS PÁIGNAS*/
+    aside{
+        background-color: transparent;
+        width: 100px;
+        height: 195px;
+        position: absolute;
+        top: 120%;
+        left: 15%;
+        display: flex;
+        flex-direction: row;
+    }
+    /*LE DAMOS UN FORMATO UNICO PARA TODA LAS FOTOS*/
+    img{
+        width: 100px;
+        height: 65px;
+        position: relative;
+        display: block;
+    }
+    /*POR ULTIMO PONEMOS EL FOOTER A NUESTRO GUSTO*/
+    footer{
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        position: fixed;
+        bottom: 2%;
+        left: 30%;
+        margin: 0%;
+        padding: 0%;
+        border: 0%;
+        width: 50%;
+        height: 10%;
+    }
+}
+/*#######################################################################*/
+/*RESOLUCION PARA TABLETS MARCAMOS ANCHURA-MAX: 800PX*/
+@media screen and (max-width: 800px) and (min-width: 450px ) {
+    html{
+        background-image: url(IMAGENES/IMAGENES\ RESOLUCION\ TABLET/FONDO.jpg);
+        width: 100%;
+        height: fit-content;
+    }
+    *{
+        font-family: 'Courier New', Courier, monospace
+    }
+    header{
+        text-align: center;
+        left: 0%;
+    }
+    img#cabecera{
+        left: 35%;
+    }
+    h2{
+        color: white;
+        background-color: black;
+        width: 80%;
+        position: relative;
+        left: 10%;
+    }
+    /*LOS ENLACES CON EL ID CAMBIA, SE MOSTRARÁN CON EL FONDO AZUL*/
+    a.cambia {
+        background-color: greenyellow;
+        transition: background-color 1s; /*AQUI PREPARO AL ENLACE PARA RECIBIR UNA ORDEN DE TRANSICION QUE LE DICTARÉ MAS ADELANTE*/
+    }
+    /*AQUI PONGO UNA REGLA QUE, EN CONJUNCION CON LA ANTERIOR, DICE QUE CUANDO PASE EL RATON POR ENCIMA, CAMBIE EL COLOR DE FONDO A DORADO*/
+    a:hover {
+        background-color: gold;
+    }
+    /*EMPEZAMOS A COLOCAR LOS ELEMENTOS DE LA BARRA DEL DESPLEGABLE*/
+    /*USAMOS ETIQUETA COMPUESTA PARA IR A LA UNORDERED LIST DENTRO DE LA ID MENU Y LE PONEMOS UNAS CARACTERISTICAS BASICAS*/
+    nav#menu ul{
+        left: 0%;
+        z-index: 1;
+        width: 40%;
+        /*INTRODUCIMOS EL MODELO BOX SIZING PARA QUE EL MENU SE VEA EN VERTICAL*/
+        display: flex;
+        flex-direction: column;
+    }
+    /*AQUI NOS REFERIMOS A TODOS LOS ELEMENTOS LI DE LA UNORDERED LIST EN ESTE CASO QUIERO QUE SEAN CON FONDO NEGRO*/
+    nav#menu ul li{
+        background-color: black;
+    }
+    /*AHORA ME REFIERO A LOS ENLACES DEL MENU PRINCIPAL. ASI SE NOS QUEDARIAN CON LA LETRA DE COLOR BLANCO, SEPARADOS Y SE MOSTRARAN COMO UN BLOQUE*/
+    nav#menu ul a{
+        display: block;
+        color: white;
+        padding: 10px;
+        letter-spacing: 1px;
+    }
+    /*CON ESTOS ELEMENTOS SE NOS QUEDA ORIENTADO HORIZONTALMENTE EN LA POSICION QUE QUEREMOS*/
+    nav#menu ul li{
+        position: relative;
+        float: left;
+        margin: 0%;
+        padding: 0%;
+    }
+    /*AHORA VAMOS A ESCONDER LOS SUBMENUS DENTRO DEL MENU PRINCIPAL*/
+    nav#menu ul ul {
+        display: none;
+        position: absolute;
+        left: 0%;
+        padding: 0%;
+    }
+
+    /*A PARTIR DE AQUI VAMOS A PONERLE COLORES DISTINTOS A CADA DESPLEGABLE Y EL COLOR HACIA EL QUE TRANSICIONA*/
+    a.gray {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gray:hover {
+        background-color:gray;
+    }
+    a.red {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.red:hover {
+        background-color: red;
+    }
+    a.blue {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.blue:hover {
+        background-color: blue;
+    }
+    a.gold {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gold:hover {
+        background-color: gold;
+    }
+    /*AQUI ACABA EL INDICE DESPLEGABLE*/
+
+    /*LE DAMOS FORMA AL PARRAFO DE LA PAGINA DE INICIO*/
+    main{
+        background-color: white;
+        opacity: 0.9;
+        margin: 0%;
+        border: 0%;
+        padding: 0%;
+        width: 80%;
+        text-align: center; 
+        position: absolute;
+        left: 5%;
+        top: 70%;
+    }
+    p#descripcion{
+        background-color:transparent;
+        border: 5px solid gold;
+    }
+    /*COLOCAMOS EL IFRAME DEL AUDIO DONDE QUERAMOS*/
+    iframe{
+        position: absolute;
+        top: 130%;
+    }
+    /*LE DAMOS FORMA A EL NAV QUE CONTIENTE LAS FOTOS QUE PINCHANDO EN ELLAS NOS LLEVA A LAS OTRAS PÁIGNAS*/
+    aside{
+        background-color: transparent;
+        margin: 0%;
+        border: 0%;
+        padding: 0%;
+        width: 310px;
+        height: 610px;
+        position: absolute;
+        top: 150%;
+        left: 5%;
+        display: flex;
+        flex-direction: row;
+    }
+    /*LE DAMOS UN FORMATO UNICO PARA TODA LAS FOTOS*/
+    img{
+        width: 200px;
+        height: 120px;
+        left: 5px;
+        top: 5px;
+        position: relative;
+        display: block;
+        border: 20px;
+        border: solid;
+        border-color: chartreuse;
+    }
+    /*POR ULTIMO PONEMOS EL FOOTER A NUESTRO GUSTO*/
+    footer{
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        position: fixed;
+        bottom: 5%;
+        left: 5%;
+        margin: 0%;
+        padding: 0%;
+        border: 0px;
+        width: 80%;
+        height: 8%;
+    }
+}

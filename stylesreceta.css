@@ -1,0 +1,545 @@
+@media screen and (min-width: 800px) {
+    /*ESTABLECEMOS UN FONDO DE PANTALLA PARA TOADA LA PAGINA*/
+    html{
+        background-image: url(IMAGENES/BACKGROUND.jpg);
+        height: 1700px;
+    }
+    /*DESPUES ESTABLECEMOS LOS VALORES ABSOLUTOS PARA TODA LA PAGINA, COMO POR EJEMPLO EL TIPO DE LETRA*/
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /*MODIFICAMOS EL HEADER A NUESTRO GUSTO*/
+    header{
+        text-align: center;
+        position: relative;
+    }
+    img#cabecera{
+        left: 550px;
+    }
+    img{
+        width: 300px;
+        height: 200px;
+        left: 5px;
+        top: 5px;
+        position: relative;
+        display: block;
+    }
+    h1{
+        color: black;
+        background-color: gray;
+        width: 1300px;
+        position: relative;
+        left: 100px;
+    }
+    /*LOS ENLACES CON EL ID CAMBIA, SE MOSTRARÁN CON EL FONDO AZUL*/
+    a.cambia {
+        background-color: powderblue;
+        transition: background-color 1s; /*AQUI PREPARO AL ENLACE PARA RECIBIR UNA ORDEN DE TRANSICION QUE LE DICTARÉ MAS ADELANTE*/
+    }
+    /*AQUI PONGO UNA REGLA QUE, EN CONJUNCION CON LA ANTERIOR, DICE QUE CUANDO PASE EL RATON POR ENCIMA, CAMBIE EL COLOR DE FONDO A DORADO*/
+    a:hover {
+        background-color: gold;
+    }
+    /*EMPEZAMOS A COLOCAR LOS ELEMENTOS DE LA BARRA DEL DESPLEGABLE, A VER QUE SALE*/
+    /*USAMOS ETIQUETA COMPUESTA PARA IR A LA UNORDERED LIST DENTRO DE LA ID MENU Y LE PONEMOS UNAS CARACTERISTICAS BASICAS*/
+    nav#menu ul{
+        list-style: none;
+        margin: 0%;
+        padding: 0%;
+        position: relative;
+        left: 400px;
+        z-index: 1;
+    }
+    /*AQUI NOS REFERIMOS A TODOS LOS ELEMENTOS LI DE LA UNORDERED LIST EN ESTE CASO QUIERO QUE SEAN CON FONDO NEGRO*/
+    nav#menu ul li{
+        background-color: black;
+    }
+    /*AHORA ME REFIERO A LOS ENLACES DEL MENU PRINCIPAL. ASI SE NOS QUEDARIAN CON LA LETRA DE COLOR BLANCO, SEPARADOS Y SE MOSTRARAN COMO UN BLOQUE*/
+    nav#menu ul a{
+        display: block;
+        color: white;
+        padding: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    /*CON ESTOS ELEMENTOS SE NOS QUEDA ORIENTADO HORIZONTALMENTE EN LA POSICION QUE QUEREMOS*/
+    nav#menu ul li{
+        position: relative;
+        float: left;
+        margin: 0%;
+        padding: 0%;
+    }
+    /*AHORA VAMOS A ESCONDER LOS SUBMENUS DENTRO DEL MENU PRINCIPAL*/
+    nav#menu ul ul {
+        display: none;
+        position: absolute;
+        left: 0%;
+        padding: 0%;
+    }
+    /*AHORA NOS REFERIMOS A LOS ITEMS DE LOS DESPLEGABLES*/
+    nav#menu ul ul li{
+        float: none;
+        width: 150px;
+    }
+    /*ENLACES DE LOS ITEMS DEL MENU DESPLEGABLE*/
+    nav#menu ul ul a{
+        line-height: 120%;
+        padding: 10px;
+    }
+    /*AHORA VAMOS A HACER QUE LOS SUBMENUS SE MUESTREN AL PASAR POR EL*/
+    nav#menu ul li:hover > ul {
+        display: block;
+    }
+    /*A PARTIR DE AQUI VAMOS A PONERLE COLORES DISTINTOS A CADA DESPLEGABLE Y EL COLOR HACIA EL QUE TRANSICIONA*/
+    a.gray {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gray:hover {
+        background-color:gray;
+    }
+    a.red {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.red:hover {
+        background-color: red;
+    }
+    a.blue {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.blue:hover {
+        background-color: blue;
+    }
+    a.gold {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gold:hover {
+        background-color: gold;
+    }
+    /*AQUI ACABA EL INDICE DESPLEGABLE*/
+
+    div#video{
+        background-color: black;
+        display: block;
+        border: 0px;
+        position: absolute;
+        width: min-content;
+        top: 400px;
+        left: 450px;
+    }
+    iframe#receta{
+        width: 560px;
+        height: 315px;
+    }
+    div#parrafada{
+        background-color: gray;
+        padding: 1cm;
+        border-radius: 25%;
+        position: absolute;
+        top: 800px;
+        left: 380px;
+        width: 700px;
+    }
+    span#encabezamientoparrafada{
+        background-color: blue;
+        color: aliceblue;
+    }
+    div#tabla{
+        background-color: black;
+        width: 1000px;
+        position: absolute;
+        top: 1200px;
+        left: 250px ;
+    }
+    tr{
+        background-color: orange;
+    }
+    td{
+        background-color: white;
+    }
+    footer{
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        position: fixed;
+        bottom: 50px;
+        left: 460px;
+        margin: 0%;
+        padding: 0%;
+        border: 0px;
+        width: 800px;
+        height: 30px;
+    }
+    div#final{
+        display: block;
+        color: black;
+        position: absolute;
+        background-color: orange;
+        top: 1500px;
+        left: 600px;
+        width: 400px;
+        text-align: center;
+        transition: background-color 1s;
+    }
+    div#final:hover{
+        background-color: greenyellow;
+    }
+    /*PONEMOS UNA PSEUDOCLASE*/
+    p.descripcion::after {
+        content: "QUE INTERESANTE!!";
+        color: white;
+    }
+}
+/*Establecemos el responsive para tablets*/
+@media screen and (max-width: 800px) and (min-width: 450px ) {
+    /*ESTABLECEMOS UN FONDO DE PANTALLA PARA TOADA LA PAGINA*/
+    html{
+        background-image: url(IMAGENES/IMAGENES\ RESOLUCION\ TABLET/FONDO.jpg);
+        width: 100%;
+        height: fit-content;
+    }
+    *{
+        font-family: 'Courier New', Courier, monospace
+    }
+    header{
+        text-align: center;
+        left: 0%;
+    }
+    img#cabecera{
+        left: 33%;
+        width: 30%;
+    }
+    h1{
+        color: white;
+        background-color: black;
+        width: 80%;
+        position: relative;
+        left: 5%;
+    }
+    /*LOS ENLACES CON EL ID CAMBIA, SE MOSTRARÁN CON EL FONDO AZUL*/
+    a.cambia {
+        background-color: greenyellow;
+        transition: background-color 1s; /*AQUI PREPARO AL ENLACE PARA RECIBIR UNA ORDEN DE TRANSICION QUE LE DICTARÉ MAS ADELANTE*/
+    }
+    /*AQUI PONGO UNA REGLA QUE, EN CONJUNCION CON LA ANTERIOR, DICE QUE CUANDO PASE EL RATON POR ENCIMA, CAMBIE EL COLOR DE FONDO A DORADO*/
+    a:hover {
+        background-color: gold;
+    }
+    /*EMPEZAMOS A COLOCAR LOS ELEMENTOS DE LA BARRA DEL DESPLEGABLE*/
+    /*USAMOS ETIQUETA COMPUESTA PARA IR A LA UNORDERED LIST DENTRO DE LA ID MENU Y LE PONEMOS UNAS CARACTERISTICAS BASICAS*/
+    nav#menu ul{
+        left: 0%;
+        z-index: 1;
+        width: 40%;
+        /*INTRODUCIMOS EL MODELO BOX SIZING PARA QUE EL MENU SE VEA EN VERTICAL*/
+        display: flex;
+        flex-direction: column;
+    }
+    /*AQUI NOS REFERIMOS A TODOS LOS ELEMENTOS LI DE LA UNORDERED LIST EN ESTE CASO QUIERO QUE SEAN CON FONDO NEGRO*/
+    nav#menu ul li{
+        background-color: black;
+    }
+    /*AHORA ME REFIERO A LOS ENLACES DEL MENU PRINCIPAL. ASI SE NOS QUEDARIAN CON LA LETRA DE COLOR BLANCO, SEPARADOS Y SE MOSTRARAN COMO UN BLOQUE*/
+    nav#menu ul a{
+        display: block;
+        color: white;
+        padding: 10px;
+        letter-spacing: 1px;
+    }
+    /*CON ESTOS ELEMENTOS SE NOS QUEDA ORIENTADO HORIZONTALMENTE EN LA POSICION QUE QUEREMOS*/
+    nav#menu ul li{
+        position: relative;
+        float: left;
+        margin: 0%;
+        padding: 0%;
+    }
+    /*AHORA VAMOS A ESCONDER LOS SUBMENUS DENTRO DEL MENU PRINCIPAL*/
+    nav#menu ul ul {
+        display: none;
+        position: absolute;
+        left: 0%;
+        padding: 0%;
+    }
+
+    /*A PARTIR DE AQUI VAMOS A PONERLE COLORES DISTINTOS A CADA DESPLEGABLE Y EL COLOR HACIA EL QUE TRANSICIONA*/
+    a.gray {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gray:hover {
+        background-color:gray;
+    }
+    a.red {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.red:hover {
+        background-color: red;
+    }
+    a.blue {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.blue:hover {
+        background-color: blue;
+    }
+    a.gold {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gold:hover {
+        background-color: gold;
+    }
+    /*AQUI ACABA EL INDICE DESPLEGABLE*/
+    div#video{
+        background-color: black;
+        display: block;
+        border: 0px;
+        position: absolute;
+        width: min-content;
+        top: 75%;
+        left: 5%;
+    }
+    iframe#receta{
+        width: 400px;
+        height: 270px;
+    }
+    div#parrafada{
+        background-color: gray;
+        border-radius: 25%;
+        position: absolute;
+        top: 130%;
+        left: 5%;
+        width: 85%;
+    }
+    span#encabezamientoparrafada{
+        background-color: blue;
+        color: aliceblue;
+    }
+    div#tabla{
+        background-color: black;
+        width: 90%;
+        position: absolute;
+        top: 190%;
+        left: 1% ;
+    }
+    tr{
+        background-color: orange;
+    }
+    td{
+        background-color: white;
+    }
+    footer{
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+        top: 270%;
+        left: 5%;
+        margin: 0%;
+        padding: 0%;
+        border: 0px;
+        width: 80%;
+        height: 50px;
+    }
+    div#final{
+        display: block;
+        color: black;
+        position: absolute;
+        background-color: orange;
+        top: 250%;
+        left: 25%;
+        width: 400px;
+        text-align: center;
+        transition: background-color 1s;
+    }
+    div#final:hover{
+        background-color: greenyellow;
+    }
+    /*PONEMOS UNA PSEUDOCLASE*/
+    p.descripcion::after {
+        content: "QUE INTERESANTE!!";
+        color: white;
+    }
+}
+@media screen and (max-width: 450px) {
+    /*ESTABLECEMOS UN FONDO DE PANTALLA PARA TOADA LA PAGINA*/
+    html{
+        background-image: url(IMAGENES/IMAGENES\ RESOLUCION\ MOVIL/FONDO.jpg);
+        width: 100%;
+        height: fit-content;
+    }
+    *{
+        font-family: 'Times New Roman', Times, serif
+    }
+    header{
+        text-align: center;
+        left: 0%;
+    }
+    img#cabecera{
+        left: 40%;
+        width: 50%;
+    }
+    h1{
+        color: white;
+        background-color: black;
+        width: 90%;
+        position: relative;
+        left: 10%;
+    }
+    /*LOS ENLACES CON EL ID CAMBIA, SE MOSTRARÁN CON EL FONDO AZUL*/
+    a.cambia {
+        background-color: greenyellow;
+        transition: background-color 1s; /*AQUI PREPARO AL ENLACE PARA RECIBIR UNA ORDEN DE TRANSICION QUE LE DICTARÉ MAS ADELANTE*/
+    }
+    /*AQUI PONGO UNA REGLA QUE, EN CONJUNCION CON LA ANTERIOR, DICE QUE CUANDO PASE EL RATON POR ENCIMA, CAMBIE EL COLOR DE FONDO A DORADO*/
+    a:hover {
+        background-color: gold;
+    }
+    /*EMPEZAMOS A COLOCAR LOS ELEMENTOS DE LA BARRA DEL DESPLEGABLE*/
+    /*USAMOS ETIQUETA COMPUESTA PARA IR A LA UNORDERED LIST DENTRO DE LA ID MENU Y LE PONEMOS UNAS CARACTERISTICAS BASICAS*/
+    nav#menu ul{
+        left: 0%;
+        z-index: 1;
+        width: 40%;
+        /*INTRODUCIMOS EL MODELO BOX SIZING PARA QUE EL MENU SE VEA EN VERTICAL*/
+        display: flex;
+        flex-direction: column;
+    }
+    /*AQUI NOS REFERIMOS A TODOS LOS ELEMENTOS LI DE LA UNORDERED LIST EN ESTE CASO QUIERO QUE SEAN CON FONDO NEGRO*/
+    nav#menu ul li{
+        background-color: black;
+    }
+    /*AHORA ME REFIERO A LOS ENLACES DEL MENU PRINCIPAL. ASI SE NOS QUEDARIAN CON LA LETRA DE COLOR BLANCO, SEPARADOS Y SE MOSTRARAN COMO UN BLOQUE*/
+    nav#menu ul a{
+        display: block;
+        color: white;
+        padding: 10px;
+        letter-spacing: 1px;
+    }
+    /*CON ESTOS ELEMENTOS SE NOS QUEDA ORIENTADO HORIZONTALMENTE EN LA POSICION QUE QUEREMOS*/
+    nav#menu ul li{
+        position: relative;
+        float: left;
+        margin: 0%;
+        padding: 0%;
+    }
+    /*AHORA VAMOS A ESCONDER LOS SUBMENUS DENTRO DEL MENU PRINCIPAL*/
+    nav#menu ul ul {
+        display: none;
+        position: absolute;
+        left: 0%;
+        padding: 0%;
+    }
+
+    /*A PARTIR DE AQUI VAMOS A PONERLE COLORES DISTINTOS A CADA DESPLEGABLE Y EL COLOR HACIA EL QUE TRANSICIONA*/
+    a.gray {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gray:hover {
+        background-color:gray;
+    }
+    a.red {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.red:hover {
+        background-color: red;
+    }
+    a.blue {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.blue:hover {
+        background-color: blue;
+    }
+    a.gold {
+        background-color: black;
+        transition: background-color 1s;
+    }
+    a.gold:hover {
+        background-color: gold;
+    }
+    /*AQUI ACABA EL INDICE DESPLEGABLE*/
+    div#video{
+        background-color: black;
+        display: block;
+        border: 0px;
+        position: absolute;
+        width: min-content;
+        top: 90%;
+        left: 20%;
+    }
+    iframe#receta{
+        width: 300px;
+        height: 200px;
+    }
+    div#parrafada{
+        background-color: gray;
+        padding: 1cm;
+        border-radius: 25%;
+        position: absolute;
+        top: 130%;
+        left: 10%;
+        width: 90%;
+    }
+    span#encabezamientoparrafada{
+        background-color: blue;
+        color: aliceblue;
+    }
+    div#tabla{
+        background-color: black;
+        width: 90%;
+        position: absolute;
+        top: 200%;
+        left: 10% ;
+    }
+    tr{
+        background-color: orange;
+    }
+    td{
+        background-color: white;
+    }
+    footer{
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+        top: 300%;
+        left: 10%;
+        margin: 0%;
+        padding: 0%;
+        border: 0px;
+        width: 90%;
+        height: 50px;
+    }
+    div#final{
+        display: block;
+        color: black;
+        position: absolute;
+        background-color: orange;
+        top: 270%;
+        left: 20%;
+        width: 400px;
+        text-align: center;
+        transition: background-color 1s;
+    }
+    div#final:hover{
+        background-color: greenyellow;
+    }
+    /*PONEMOS UNA PSEUDOCLASE*/
+    p.descripcion::after {
+        content: "QUE INTERESANTE!!";
+        color: white;
+    }
+}

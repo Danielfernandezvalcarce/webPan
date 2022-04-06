@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <!--HACEMOS UN LINK PARA ESTABECER EL CSS-->
+    <link rel="stylesheet" href = "styles.css">
+    
+</head>
+<body>
+    <header>
+        <img id="cabecera" src="IMAGENES/LOGOTIPO.jpg">
+        <h2>EN ESTA PAGINA SE MUESTRA UNA PEQUEÑA INTRODUCCION AL MUNDO DEL PAN</h2>
+    </header>
+    <!--EN ESTE DIV VOY A INTENTAR HACER UN DESPLEGABLE CON LAS 3 PAGINAS QUE QUIERO VISITAR Y LOS ENLACES,
+    DENTRO DE CADA DESPLEGABLE VOY A INTENTAR REFERIR EN ENLACE A UNA PARTE CONCRETA DE LA PAGINA-->
+    <nav id="menu">
+        <ul>
+            <!--MENU, ACORDARSE DE QUITAR EL "_TARGET" DE LA PÁGINA QUE ESTAMOS-->
+            <!--IDENTIFICAMOS DISTINTAS CLASES DE ENLACE PARA PODER PONERLE UN COLOR A CADA UNA-->
+            <li><a class="gray" href="index.html">INICIO</a></li>
+            <li><a class="red" href="historia.html" target="_blank">HISTORIA</a>
+                <ul>
+                    <!--SUBMENU CON TRANSICION A ROJO-->
+                    <li><a class="red" href="historia.html" target="_blank">PREHISTORIA</a></li>
+                    <li><a class="red" href="historia.html" target="_blank">EDAD MEDIA</a></li>
+                    <li><a class="red" href="historia.html" target="_blank">REVOLUCION INDUSTRIAL</a></li>
+                    <li><a class="red" href="historia.html" target="_blank">ACTUALIDAD</a></li>
+                </ul>
+            </li>
+            <li><a class="blue" href="receta.html" target="blank">RECETA</a>
+                <ul>
+                    <!--SUBMENU CON TRANSICION A AZUL-->
+                    <li><a class="blue" href="receta.html" target="_blank">VIDEO</a></li>
+                    <li><a class="blue" href="receta.html" target="_blank">LISTA DE LA COMPRA</a></li>
+                    <li><a class="blue" href="receta.html" target="_blank">ELABORACION</a></li>
+                </ul>
+            </li>
+            <li><a class="gold" href="paginas para comprar pan.html" target="_blank">COMPRAR PAN</a>
+                <ul>
+                    <!--SUBMENU3-->
+                    <li><a class="gold" href="paginas para comprar pan.html" target="_blank">EN MALLORCA</a></li>
+                    <li><a class="gold" href="paginas para comprar pan.html" target="_blank">EN ESPAÑA</a></li>
+                    <li><a class="gold" href="paginas para comprar pan.html" target="_blank">EN EUROPA</a></li>    
+                    <li><a class="gold" href="paginas para comprar pan.html" target="_blank">EN MUNDO</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <!--EN ESTE PARRAFO VA UNA PEQUEÑA DESCRIPCION DEL PAN SACADA DE WILIPEDIA, SE HAN INTRODUCIDO ENLACES Y DISTINTAS MODIFICACIONES,
+            TAMBIEN SE HA INTRODUCIDO UN IDENTIFICADOR PARA DESPUES TRABAJAR SOBRE EL ELEMENTO EN CONCRETO EN HTML-->
+        <p id="descripcion">El pan, del latín panis, es un alimento básico que forma parte de la dieta tradicional en <b>Europa,
+        Medio Oriente, India, América y Oceanía.</b> Se suele preparar mediante el horneado de una masa, elaborada 
+        fundamentalmente con <b>harina de cereal, agua y sal.</b> La mezcla, en la mayoría de las ocasiones, suele contener 
+        levaduras para que fermente la masa y sea más esponjosa y tierna.
+        El cereal más utilizado para la elaboración del pan es la harina de trigoción de la masa antes del horneado, 
+        y como consecuencia, le proporciona un volumen y una esponjosidad debido a la producción de pequeñas burbujas de <i>dióxido 
+        de carbono (CO2)</i> que se quedan inmersas entre la masa húmeda de la harina.
+        Existen muchos tipos de pan que pueden contener otros ingredientes, como grasas de diferentes 
+        tipos —aceite, mantequilla, tocino de cerdo o de vaca—, huevos, azúcar, especias, frutas, frutas secas —como 
+        por ejemplo pasas—, verduras como la cebolla y el ajo, o semillas diversas. <i>FUENTE: 
+        <a class="cambia" href="https://es.wikipedia.org/wiki/Wikipedia:Portada">Wikipedia</i></a></p>
+    </main>
+    <iframe src="AUDIOS/llama.mp3" frameborder="0" width="150px" height="70px" autoplay></iframe>
+    <aside>
+        <!--DENTRO DE ESTE NAV VAN LOS ENLACES A LAS 3 PAGINAS AUXILIARES, REPRESENTADAS POR IMAGENES EN INDEX
+        , TIENEN UN MENSAJE ALTERNATIVO Y SE ABREN EN UNA PESTAÑA DISTINTA-->
+        <a href="historia.html" target="_blank"><img src="IMAGENES/IMAGEN HISTORIA DEL PAN.jpg" alt="ENLACE PARA LA HISTORIA DEL PAN"></a>
+        <a href="receta.html" target="_blank"><img src="IMAGENES/IMAGEN RECETA Y ELABORACION.jpg" alt="ENLACE PARA VER LAS RECETAS Y ELABORACION"></a>
+        <a href="paginas para comprar pan.html" target="_blank"><img src="IMAGENES/IMAGEN DE UNA PANADERIA.jpg" alt="ENLACE PARA VER LUGARES DONDE COMPRAR PAN"></a>
+    </aside>
+    <!--EN EL FOOTER VA MI IDENTIFICACION-->
+    <footer>
+        Alumno de primero de DAW del CFIP "Borja Moll" Daniel Fernández Valcarce.
+    </footer>
+</body>
+</html>
